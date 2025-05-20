@@ -6,11 +6,11 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button variant="primary" size="large" href="https://instagram.com" target="_blank">Klicka här</Button>
-		<Button variant="primary" size="medium" href="https://instagram.com" target="_blank">Klicka här</Button>
-		<Button variant="secondary" size="small" href="https://instagram.com" target="_blank">Klicka här</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-	</article>
+<section id="hero">
+	<div class="mt-4xl text-h2Sm md:text-h2">
+    <h2>High-Speed <span class="font-bold">Navigation</span><br />Maritime <span class="font-bold">Expertise</span></h2></div>
+	<p class="my-2xl font-bold text-bodySm md:text-body">Hands-on training for fast-boat operations, navigation & rescue.</p>
+	<div class="flex justify-end"><Button variant="primary" size="medium" href="">Contact</Button></div>
+</section>
+
 </MainLayout>
