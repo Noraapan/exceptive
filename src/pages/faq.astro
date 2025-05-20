@@ -1,10 +1,54 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import FaqInfo from '../components/FaqInfo.astro'
 ---
 
 <MainLayout title="Titel">
+    <h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2">FAQ</h2>
     <section>
-        
+       <div class="grid grid-cols-2">
+        <h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2">General</h2> 
+        <div>
+         <FaqInfo/>
+         <FaqInfo/>
+         <FaqInfo/>
+        </div>
+       </div>
     </section>
+
+    <section>
+       <div class="grid grid-cols-2">
+        <div>
+         <FaqInfo/>
+         <FaqInfo/>
+        </div>
+        <h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2"><span class="font-black">Courses &</span><br>Consulting</h2> 
+       </div>
+    </section>
+
+        <section>
+       <div class="grid grid-cols-2">
+        <h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2"><span class="font-black">Facilities &</span><br>Accomodation</h2> 
+        <div>
+         <FaqInfo/>
+         <FaqInfo/>
+         <FaqInfo/>
+        </div>
+       </div>
+    </section>
+
+    <section>
+       <div class="grid grid-cols-2">
+        <div>
+         <FaqInfo/>
+         <FaqInfo/>
+         <FaqInfo/>
+        </div>
+        <h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2"><span class="font-black">Booking &</span><br>Practical Info</h2> 
+       </div>
+    </section>
+
+    <Button>Contact</Button>
+
 </MainLayout>
