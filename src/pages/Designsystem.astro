@@ -1,0 +1,130 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import { Image } from 'astro:assets';
+import thumbsup from "../assets/images/thumbsup.png";
+---
+<MainLayout title="Titel">
+	<article class="max-w-screen-xl mx-auto bg-white">
+	  <div class="prose">
+		<h1 class="text-h2 text-blue-500">Design system!</h1>
+		<p class="text-bodySm md:text-body">
+		  Tailwind konfigureret til at følge August og Noras{" "}
+		  <a class="text-linkSm md:text-link" href="https://www.figma.com/design/s0iIOTU2SFktUTQxtIVIA7/b%C3%A6llevin?node-id=105-552&t=klcqZ4KWn0Lk7BvR-1">
+			design system
+		  </a>
+		</p>
+	  </div>
+	  <section>
+		<h2 class="text-h2 font-bold mt-lg">Typografi</h2>
+		<div class="mt-lg">
+			<h1 class="text-h1 font-black">Headline 1</h1>
+		</div>
+		<div class="mt-lg">
+			<h2 class="text-h2 font-black">Headline 2</h2>
+		</div>
+		<div class="mt-lg">
+			<h3 class="text-h3 font-black">Headline 3</h3>
+		</div>
+		<h3 class="text-h3 md:text-h3Sm font-black mt-sm ">Størrelse</h3>
+		<div class="flex flex-col [&>p]:place-content-center gap-xxs max-w-9xl">
+		  <p class="text-bodySm md:text-body font-black">Brødtekst</p>
+		  <p class="text-bodySm md:text-body font-black">
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae
+			rerum, minima molestias doloribus excepturi ab reprehenderit placeat
+			dignissimos quia ratione deserunt unde, similique, vitae fuga nulla
+			veniam architecto quaerat. Maiores.
+		  </p>
+		  <p class="text-h1">Large</p>
+		  <p class="text-h2">Medium</p>
+          <p class="text-h3">Small</p>
+		</div>
+		<h3 class="text-h3 md:text-h3Sm font-black mt-sm">Vægt</h3>
+		<div class="flex flex-col [&>p]:place-content-center gap-xxs">
+		  <p class="font-regular">Regular</p>
+		  <p class="font-bold">Bold</p>
+		  <p class="font-black">Black</p>
+		</div>
+	  </section>
+	  <section>
+		<h2 class="text-h2 font-black mt-lg">Farver</h2>
+		<h3 class="text-h3 md:text-h3Sm font-black mt-sm">Blue</h3>
+		<div class="flex [&>p]:text-center [&>p]:place-content-center">
+		  <p class="w-lg h-lg bg-blue-50">50</p>
+		  <p class="w-lg h-lg bg-blue-100">100</p>
+		  <p class="w-lg h-lg bg-blue-200">200</p>
+		  <p class="w-lg h-lg bg-blue-300">300</p>
+		  <p class="w-lg h-lg bg-blue-400">400</p>
+		  <p class="w-lg h-lg bg-blue-500 text-neutral-50">500</p>
+		  <p class="w-lg h-lg bg-blue-600 text-neutral-50">600</p>
+		  <p class="w-lg h-lg bg-blue-700 text-neutral-50">700</p>
+		  <p class="w-lg h-lg bg-blue-800 text-neutral-50">800</p>
+		  <p class="w-lg h-lg bg-blue-900 text-white">900</p>
+		</div>
+		<h3 class="text-h3 md:text-h3Sm font-black mt-sm">Black</h3>
+		<div class="flex [&>p]:text-center [&>p]:place-content-center">
+		  <p class="w-lg h-lg bg-black-50">50</p>
+		  <p class="w-lg h-lg bg-black-100">100</p>
+		  <p class="w-lg h-lg bg-black-200">200</p>
+		  <p class="w-lg h-lg bg-black-300">300</p>
+		  <p class="w-lg h-lg bg-black-400">400</p>
+		  <p class="w-lg h-lg bg-black-500 text-neutral-50">500</p>
+		  <p class="w-lg h-lg bg-black-600 text-neutral-50">600</p>
+		  <p class="w-lg h-lg bg-black-700 text-neutral-50">700</p>
+		  <p class="w-lg h-lg bg-black-800 text-neutral-50">800</p>
+		  <p class="w-lg h-lg bg-black-900 text-white">900</p>
+		</div>
+	  </section>
+	  <section>
+		<h2 class="text-h2Sm md:text-h2 font-black mt-lg">Spacing</h2>
+		<div class="flex flex-col [&>p]:text-center [&>p]:place-content-center gap-xxs">
+		  <p class="w-xxs h-lg bg-blue-300">xxs</p>
+		  <p class="w-xs h-lg bg-blue-300">xs</p>
+		  <p class="w-s h-lg bg-blue-300">s</p>
+		  <p class="w-sm h-lg bg-blue-300">sm</p>
+		  <p class="w-m h-lg bg-blue-300">m</p>
+		  <p class="w-ml h-lg bg-blue-300">ml</p>
+		  <p class="w-lg h-lg bg-blue-300">lg</p>
+		  <p class="w-xl h-lg bg-blue-300">xl</p>
+		  <p class="w-2xl h-lg bg-blue-300">2xl</p>
+          <p class="w-3xl h-lg bg-blue-300">3xl</p>
+          <p class="w-4xl h-lg bg-blue-300">4xl</p>
+          <p class="w-5xl h-lg bg-blue-300">5xl</p>
+          <p class="w-6xl h-lg bg-blue-300">6xl</p>
+          <p class="w-7xl h-lg bg-blue-300">7xl</p>
+          <p class="w-8xl h-lg bg-blue-300">8xl</p>
+          <p class="w-9xl h-lg bg-blue-300">9xl</p>
+          <p class="w-10xl h-lg bg-blue-300">10xl</p>
+          <p class="w-11xl h-lg bg-blue-300">11xl</p>
+		</div>
+	  </section>
+	  <section>
+		<h2 class="text-h2Sm md:text-h2 font-black mt-lg">Borders</h2>
+		<h3 class="text-h3Sm md:text-h3 font-black mt-sm">Border radius</h3>
+		<div class="flex gap-xxs [&>p]:text-center [&>p]:place-content-center">
+		  <p class="w-4xl h-4xl border border-blue-500 rounded-none">
+			None
+		  </p>
+		  <p class="w-4xl h-4xl border border-blue-500 rounded-9">
+			9px
+		  </p>
+		  <p class="w-4xl h-4xl border border-blue-500 rounded-32">
+			32px
+		  </p>
+		</div>
+	  </section>
+	  <section>
+		<h2 class="text-h2Sm md:text-h2 font-black mt-lg">Shadows</h2>
+		<div class="flex gap-xxs [&>p]:text-center [&>p]:place-content-center">
+		  <p class="w-32 h-lg border border-blue-500 shadow-drop-50">
+			Drop 50
+		  </p>
+		  <p class="w-32 h-lg border border-blue-500 shadow-inner-25">
+			Inner 50
+		  </p>
+		</div>
+	  </section>
+	</article>
+  </MainLayout>
+  

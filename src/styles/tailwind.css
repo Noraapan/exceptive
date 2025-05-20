@@ -1,26 +1,70 @@
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap");
 
-@plugin '@tailwindcss/typography';
-@plugin '@tailwindcss/forms';
-
-
-@theme {
-  /* Her tilføjes theme variable // tokens */
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+  /* ------ css reset ------ */
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
   }
-}
 
-@layer components{
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
 
-}
-@layer utilities{
-  
+  /* ny test */
+  body,
+  .scroll-container {
+    scroll-snap-type: y mandatory; /* Enable scroll snapping vertically */
+    overflow-y: scroll; /* Enable vertical scroll */
+    height: 100vh; /* Ensure full height for the scroll container */
+  }
+
+  section {
+    scroll-snap-align: start; /* Snap each section to the top */
+  }
+  h1,
+  h2,
+  h3,
+  a,
+  p {
+    @apply font-orbitron;
+  }
+
+  .blink-1 {
+    -webkit-animation: blink-1 0.6s 2s both;
+    animation: blink-1 0.6s 2s both;
+  }
+
+  @-webkit-keyframes blink-1 {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+  @keyframes blink-1 {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
 }
