@@ -67,4 +67,31 @@
       opacity: 0;
     }
   }
+
+
+  @keyframes sail {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  20% {
+    transform: translateX(-30px) translateY(-3px);
+  }
+  40% {
+    transform: translateX(-60px) translateY(0px);
+  }
+  60% {
+    transform: translateX(-90px) translateY(-3px);
+  }
+  80% {
+    transform: translateX(-120px) translateY(0px);
+  }
+  100% {
+    transform: translateX(-150px) translateY(0px);
+  }
+}
+
+.animate-sail {
+  animation: sail 2.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
 }

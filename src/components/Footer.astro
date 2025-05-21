@@ -1,5 +1,6 @@
 ---
 import Button from '../components/Button.astro';
+import HappyButton from './HappyButton.astro';
 ---
 <article class="px-sm md:px-m lg:px-lg pt-sm md:pt-m lg:pt-lg">
 <div><img src="/logo-lg.svg" alt="large logo"></div>
@@ -11,8 +12,9 @@ import Button from '../components/Button.astro';
         <a class="hover:underline"href="/contact">Contact</a>
     </div>
     <div class="mt-lg">
-        <Button variant="secondary" size="medium" href="/contact">Contact</Button>
+        <HappyButton></HappyButton>
     </div>
 </div>
 <p class="max-w-[932px] text-bodyDecoSm md:text-bodyDeco my-lg pb-xxs md:pb-xs lg:pb-s"><span class="font-black">EXCEPTIVE,</span> Djupviksvägen 1, 370 22 Drottningskär, Aspö, Sweden. Pelle@exceptive.se © Copyright 2025</p>
+
 </article>
