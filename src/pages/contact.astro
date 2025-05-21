@@ -3,66 +3,74 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 ---
 <MainLayout title="Titel">
-    <section>
-        <article class="mt-4xl grid grid-cols-2">
+ <section>
+ <article class="mt-4xl grid md:grid-cols-2">
         <div>
             <h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2">Get <span class="font-regular">in touch</span></h2>
             <p class="font-black text-bodySm md:text-body">Whether you're looking to strengthen your crew’s high-speed navigation skills, explore tailored maritime training, or plan a unique stay on Aspö with the option of guided boat experiences - we're here to help. <br><br> Reach out to learn more about our specialized courses, availability, or how we can support your maritime goals with precision, experience, and action.</p>
         </div>
       <!--   form  -->
-        <div>
-<form class="bg-blue-900 font-orbitron text-bodyDeco text-white p-6 grid gap-4 grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto">
-  <div class="col-span-2">
-    <label class="block text-sm font-bold mb-1">Full name</label>
-    <input type="text" name="fullname" class="w-full border border-white bg-transparent p-2 text-white placeholder-white" placeholder="Your name" required />
-  </div>
+    
+     <div>
+  <form 
+    name="contact" 
+    method="POST"
+    data-netlify="true" 
+    action="/thankyou"
+    class="bg-blue-500 font-orbitron text-bodyDeco text-white p-6 grid gap-4 grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto"
+  >
+    <!-- Steg 2: döljer input med formnamnet -->
+    <input type="hidden" name="form-name" value="contact" />
 
-  <div>
-    <label class="block text-sm font-bold mb-1">E-mail</label>
-    <input type="email" name="email" class="w-full border border-white bg-transparent p-2 text-white placeholder-white" placeholder="you@example.com" required />
-  </div>
+    <div class="col-span-2">
+      <label class="block text-sm font-bold mb-1">Full name</label>
+      <input type="text" name="fullname" class="w-full border border-white bg-transparent p-2 text-white placeholder-white" placeholder="Your name" required />
+    </div>
 
-  <div>
-    <label class="block text-sm font-bold mb-1">Phone</label>
-    <input type="tel" name="phone" class="w-full border border-white bg-transparent p-2 text-white placeholder-white" placeholder="+46 700 000 000" />
-  </div>
+    <div>
+      <label class="block text-sm font-bold mb-1">E-mail</label>
+      <input type="email" name="email" class="w-full border border-white bg-transparent p-2 text-white placeholder-white" placeholder="you@example.com" required />
+    </div>
 
-  <div>
-    <label class="block text-sm font-bold mb-1">Select profile</label>
-    <select name="profile" class="w-full border border-white bg-transparent p-2 text-white" required>
-      <option value="" disabled selected>Choose...</option>
-      <option value="Government">Government</option>
-      <option value="Commercial">Commercial</option>
-      <option value="Press">Press</option>
-      <option value="Private">Private</option>
-      <option value="Supplier">Supplier</option>
-    </select>
-  </div>
+    <div>
+      <label class="block text-sm font-bold mb-1">Phone</label>
+      <input type="tel" name="phone" class="w-full border border-white bg-transparent p-2 text-white placeholder-white" placeholder="+46 700 000 000" />
+    </div>
 
-  <div>
-    <label class="block text-sm font-bold mb-1">Country</label>
-    <select name="country" class="w-full border border-white bg-transparent p-2 text-white" required>
-      <option value="" disabled selected>Choose country...</option>
-      <!-- Länder kommer här -->
-      <option value="Sweden">Sweden</option>
-      <option value="Norway">Norway</option>
-      <option value="Germany">Germany</option>
-      <option value="United States">United States</option>
-      <option value="United Kingdom">United Kingdom</option>
-      <!-- Lägg till fler länder eller importera från en JSON-fil -->
-    </select>
-  </div>
+    <div>
+      <label class="block text-sm font-bold mb-1">Select profile</label>
+      <select name="profile" class="w-full border border-white bg-transparent p-2 text-white" required>
+        <option value="" class="bg-blue-500" disabled selected>Choose...</option>
+        <option value="Government" class="bg-blue-500">Government</option>
+        <option value="Commercial" class="bg-blue-500">Commercial</option>
+        <option value="Press" class="bg-blue-500">Press</option>
+        <option value="Private" class="bg-blue-500">Private</option>
+        <option value="Supplier" class="bg-blue-500">Supplier</option>
+      </select>
+    </div>
 
-  <div class="col-span-2">
-    <label class="block text-sm font-bold mb-1">Tell us more</label>
-    <textarea name="message" class="w-full border border-white bg-transparent p-2 text-white placeholder-white" rows="4" placeholder="Your message..."></textarea>
-  </div>
+    <div>
+      <label class="block text-sm font-bold mb-1">Country</label>
+      <select name="country" class="w-full border border-white bg-transparent p-2 text-white" required>
+        <option value="" disabled selected>Choose country...</option>
+        <option value="Sweden" class="bg-blue-500">Sweden</option>
+        <option value="Norway" class="bg-blue-500">Norway</option>
+        <option value="Denmark" class="bg-blue-500">Denmark</option>
+        <option value="United Arab Emirates" class="bg-blue-500">United Arab Emirates</option>
+        <option value="United Kingdom" class="bg-blue-500 hover:bg-blue-50">United Kingdom</option>
+      </select>
+    </div>
 
-  <div class="col-span-2 flex justify-end mt-2">
-    <Button variant="primary" size="medium">Send</Button>
-  </div>
-</form>
-        </div>
-    </article>
-    </section>
+    <div class="col-span-2">
+      <label class="block text-sm font-bold mb-1">Tell us more</label>
+      <textarea name="message" class="w-full border border-white bg-transparent p-2 text-white placeholder-white" rows="4" placeholder="Your message..."></textarea>
+    </div>
+
+    <div class="col-span-2 flex justify-end mt-2">
+      <Button variant="primary" size="medium" type="submit">Send</Button>
+    </div>
+  </form>
+    </div>
+     </article>
+     </section>
 </MainLayout>
