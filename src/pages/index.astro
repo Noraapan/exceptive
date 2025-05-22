@@ -271,20 +271,24 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 
 
-<script type="module">
-  import { animate, scroll } from "motion";
+<script>
+  import { animate, inView } from "motion";
 
-  console.log("🚀 Motion script loaded");
+  inView(".scrollfade-video", ({ target }) => {
+    animate(
+      target,
+      { opacity: [0, 1], scale: [0.5, 1] },
+      { duration: 1.5, easing: "ease-out" }
+    );
 
-  scroll(
-    animate('.scrollfade-video', {
-      opacity: [0, 1],
-      scale: [0.5, 1]
-    }),
-    {
-      target: document.querySelector('.scrollfade'),
-      offset: ['start end', 'end start'],
-      scrub: true
-    }
-  );
+    // Om du vill återställa animationen när den lämnar viewporten:
+    return () => {
+      animate(
+        target,
+        { opacity: 0, scale: 0.5 },
+        { duration: 1 }
+      );
+    };
+  });
 </script>
+
