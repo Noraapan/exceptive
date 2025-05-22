@@ -55,16 +55,15 @@ import thumbsup from "../assets/images/thumbsup.png";
 </div>
 </section>
 
-
-<section>
-	<!-- data  -->
+<!--utan animation: <section>
+	
 	 <h2 class="text-h2Sm md:text-h2 lg:text-h2 pl-sm md:pl-m lg:pl-lg font-black">Goals <span class="font-regular">reached</span></h2>
 	 <div class="flex justify-center">
 		<article class="grid md:grid-cols-2 gap-s">
 			<div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/red.jpg')] hover:bg-cover hover:bg-center rounded-9">
 				<h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black ">COARSES HELD WITH EXCEPTIVE</h3>
 				<h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2 text-center">139</h2>
-			</div>
+			</div> 
 			<div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/greenpeace.jpg')] hover:bg-cover hover:bg-center rounded-9">
 				<h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black ">HAPPY <br>CONTESTANTS</h3>
 				<h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2 text-center">211</h2>
@@ -80,10 +79,60 @@ import thumbsup from "../assets/images/thumbsup.png";
 		</article>
 	 </div>
 	 <Button>FAQ</Button>
-</section>
+</section>   -->
+<section>
+  <h2 class="text-h2Sm md:text-h2 lg:text-h2 pl-sm md:pl-m lg:pl-lg font-black">
+    Goals <span class="font-regular">reached</span>
+  </h2>
+  <div class="flex justify-center">
+    <article class="grid md:grid-cols-2 gap-s">
 
-<!-- bild + scroll based h1 med alpine.js koder-->
-<!-- <section 
+      <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/red.jpg')] hover:bg-cover hover:bg-center rounded-9">
+        <h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black">COARSES HELD WITH EXCEPTIVE</h3>
+        <h2
+          x-data="{ count: 0, end: 139, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 10); } }"
+          x-init="observer = new IntersectionObserver((e) => { if (e[0].isIntersecting) { start(); observer.disconnect(); } }); observer.observe($el)"
+          x-text="count"
+          class="font-black text-h2Sm md:text-h2Md lg:text-h2 text-center"
+        ></h2>
+      </div>
+
+      <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/greenpeace.jpg')] hover:bg-cover hover:bg-center rounded-9">
+        <h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black">HAPPY <br>CONTESTANTS</h3>
+        <h2
+          x-data="{ count: 0, end: 211, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 10); } }"
+          x-init="observer = new IntersectionObserver((e) => { if (e[0].isIntersecting) { start(); observer.disconnect(); } }); observer.observe($el)"
+          x-text="count"
+          class="font-black text-h2Sm md:text-h2Md lg:text-h2 text-center"
+        ></h2>
+      </div>
+
+      <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/pellep.jpg')] hover:bg-cover hover:bg-center rounded-9">
+        <h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black">YEARLY TRAINING SESSIONS</h3>
+        <h2
+          x-data="{ count: 0, end: 16, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 50); } }"
+          x-init="observer = new IntersectionObserver((e) => { if (e[0].isIntersecting) { start(); observer.disconnect(); } }); observer.observe($el)"
+          x-text="count"
+          class="font-black text-h2Sm md:text-h2Md lg:text-h2 text-center"
+        ></h2>
+      </div>
+
+      <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/highlandfate.jpg')] hover:bg-cover hover:bg-center rounded-9">
+        <h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black">MARINE SAFETY COMPLIANCE</h3>
+        <h2
+          x-data="{ count: 0, end: 100, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 20); } }"
+          x-init="observer = new IntersectionObserver((e) => { if (e[0].isIntersecting) { start(); observer.disconnect(); } }); observer.observe($el)"
+          x-text="count + '%'"
+          class="font-black text-h2Sm md:text-h2Md lg:text-h2 text-center"
+        ></h2>
+      </div>
+
+    </article>
+  </div>
+  <button>FAQ</button>
+</section> 
+
+<!--Utan animation: <section 
   x-data="{ scrollY: 0 }" 
   x-init="scrollY = window.scrollY; window.addEventListener('scroll', () => scrollY = window.scrollY)" 
   class="relative overflow-hidden h-screen"
@@ -96,6 +145,8 @@ import thumbsup from "../assets/images/thumbsup.png";
     EXCEPTIVE
   </h1>
 </section> -->
+
+<!-- bild + scroll based h1 med alpine.js koder-->
 <section 
   x-data="{ 
     scrollY: 0,
@@ -108,20 +159,13 @@ import thumbsup from "../assets/images/thumbsup.png";
       scrollFactor = window.innerWidth >= 768 ? 0.2 : 0.05
     })
   " 
-  class="relative h-screen overflow-hidden"
->
-  <!-- Bild -->
+  class="relative h-screen overflow-hidden">
   <img class="w-full h-full object-cover" src="/atlanticosprey.jpg" alt="Maritime Rescue image">
-
-  <!-- Rubrik -->
-  <h1 
-    class="absolute bottom-6 left-11 md:bottom-0 md:left-[850px] 
+  <h1 class="absolute bottom-6 left-11 md:bottom-0 md:left-[850px] 
            text-h1Md md:text-h1 font-black text-white/80 z-10 
            transition-transform duration-100"
-    :style="`transform: translateX(-${scrollY * scrollFactor}px)`"
-  >
-    EXCEPTIVE
-  </h1>
+    :style="`transform: translateX(-${scrollY * scrollFactor}px)`">
+    EXCEPTIVE</h1>
 </section>
 
 
@@ -162,3 +206,4 @@ import thumbsup from "../assets/images/thumbsup.png";
 </section>
 
 </MainLayout>
+
