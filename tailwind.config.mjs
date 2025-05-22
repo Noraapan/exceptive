@@ -83,7 +83,7 @@ export default {
         body: ["25px", { lineHeight: "auto", letterSpacing: "0px" }],
         link: ["12px", { lineHeight: "auto", letterSpacing: "0px" }],
         bodyDeco: ["21px", { lineHeight: "32px", letterSpacing: "0px" }],
-        h1Md: ["180px", { lineHeight: "auto", letterSpacing: "0px" }],
+        h1Md: ["110px", { lineHeight: "auto", letterSpacing: "0px" }],
         h2Md: ["56px", { lineHeight: "91px", letterSpacing: "0px" }],
         h1Sm: ["50px", { lineHeight: "auto", letterSpacing: "0px" }],
         h2Sm: ["28px", { lineHeight: "auto", letterSpacing: "0px" }],
