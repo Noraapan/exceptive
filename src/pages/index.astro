@@ -7,7 +7,10 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 ---
 <MainLayout title="Titel">
-<section id="hero" class="h-screen bg-[url('/bg_grid.svg'),url('/bg_blue.jpg')] bg-cover bg-center">
+  <div class="fixed inset-0 z-[-1] bg-[url('/bg_grid.svg'),url('/bg_blue.jpg')] bg-repeat bg-center bg-cover"></div>
+
+
+<section id="hero" class="h-screen ">
 	<!-- hero med båt som rör sig -->
 	<div class="">
     <h2 class="text-h2Sm md:text-h2Md lg:text-h2 pt-4xl pl-sm md:pl-m lg:pl-lg">High-Speed <span class="font-black">Navigation</span><br /><span class="font-black">Maritime</span> Expertise</h2></div>
@@ -24,7 +27,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 		<div>
 			<img src="/logo.svg" alt="logo">
 			<h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2 pl-sm md:pl-m lg:pl-lg">About <span class="font-regular">us</span></h2>
-			<p class="font-black text-bodySm md:text-body pl-sm md:pl-m lg:pl-lg">Exceptive is a specialized consultancy offering advanced training for ship and boat commanders, with a sharp focus on high-speed navigation, maritime operations, tactical decision-making, and emergency response. Our training programs are tailored for professionals in demanding maritime environments.<br> <br>Including military, rescue, and law enforcement units, and emphasize hands-on experience, situational awareness, and operational safety under extreme conditions.<br><br>In addition to our courses, we also offer the possibility to rent houses on Aspö in the southern Swedish archipelago. These houses are available both for participants attending training on the island and for private guests who wish to experience the unique coastal surroundings.<br><br>Visitors can also book guided high-speed boat tours through the archipelago, combining stunning nature with advanced navigation experiences.<br />At its core, Exceptive is about precision, confidence, and excellence at sea — whether you're here to train, collaborate, or simply enjoy the marine environment from a new perspective.</p>
+			<p class="font-black text-bodySm md:text-body pl-sm md:pl-m lg:pl-lg"></p>
 		</div>
 		<div>
 
@@ -35,7 +38,8 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 <section class="scrollfade relative overflow-clip">
   <!-- Sticky video section -->
-  <div class="sticky top-0 h-screen w-full z-0 opacity-0">
+
+  <div class="sticky top-0 h-screen w-full z-0 ">
     <video
       src="/bg_vid.mp4"
       autoplay
@@ -46,22 +50,20 @@ import thumbsup from "../assets/images/thumbsup.png";
     ></video>
   </div>
 
-  <!-- Spacer to allow scroll before overlay shows up -->
-  <div class="h-[60vh]"></div>
 
   <!-- Content overlay (comes after scroll) -->
-  <div class="relative z-10 bg-[rgba(25,37,192,0.5)] py-20">
-    <div class="md:grid grid-cols-2 w-full px-4 md:px-8 text-white">
-      <div>
-        <img src="/logo.svg" alt="logo" />
-        <h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2 pl-sm md:pl-m lg:pl-lg">
+  <div class="relative z-10 bg-[rgba(25,37,192,0.5)]">
+    <div class="md:grid grid-cols-2 w-full text-white">
+      <div class="pl-sm md:pl-m lg:pl-lg pt-m">
+        <img class="w-7xl" src="/logo.svg" alt="logo" />
+        <h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2 ">
           About <span class="font-regular">us</span>
         </h2>
-        <p class="font-black text-bodySm md:text-body pl-sm md:pl-m lg:pl-lg">
-          <!-- Ditt innehåll här -->
+        <p class="font-black text-bodySm md:text-body ">
+          Exceptive is a specialized consultancy offering advanced training for ship and boat commanders, with a sharp focus on high-speed navigation, maritime operations, tactical decision-making, and emergency response. Our training programs are tailored for professionals in demanding maritime environments.<br> <br>Including military, rescue, and law enforcement units, and emphasize hands-on experience, situational awareness, and operational safety under extreme conditions.<br><br>In addition to our courses, we also offer the possibility to rent houses on Aspö in the southern Swedish archipelago. These houses are available both for participants attending training on the island and for private guests who wish to experience the unique coastal surroundings.<br><br>Visitors can also book guided high-speed boat tours through the archipelago, combining stunning nature with advanced navigation experiences.<br />At its core, Exceptive is about precision, confidence, and excellence at sea — whether you're here to train, collaborate, or simply enjoy the marine environment from a new perspective.
         </p>
       </div>
-      <div>
+      <div class="">
         <img src="/karta_svg.svg" alt="karta" />
       </div>
     </div>
@@ -251,44 +253,24 @@ import thumbsup from "../assets/images/thumbsup.png";
 	 <img src="" alt="">
 </section>
 
-
-<!-- test animation -->
- <section class="scrollfade relative overflow-clip h-[300vh]">
-  <!-- Sticky video -->
-  <div class="sticky top-0 h-screen w-full z-0">
-    <video
-      src="/bg_vid.mp4"
-      autoplay
-      muted
-      loop
-      playsinline
-      class="scrollfade-video w-full h-full object-cover opacity-0 scale-50"
-    ></video>
-  </div>
-</section>
-
 </MainLayout>
 
-
-
 <script>
-  import { animate, inView } from "motion";
+  import { animate, scroll, inView } from "motion";
 
-  inView(".scrollfade-video", ({ target }) => {
-    animate(
-      target,
-      { opacity: [0, 1], scale: [0.5, 1] },
-      { duration: 1.5, easing: "ease-out" }
+  inView(".scrollfade-video", () => {
+    // starta scrollbaserad animation först när videon är i view
+    scroll(
+      animate(".scrollfade-video", {
+        opacity: [0, 1],
+        scale: [0.5, 1],
+      }),
+      {
+        target: document.querySelector(".scrollfade"),
+        offset: ["start end", "start start"],
+        scrub: true,
+      }
     );
-
-    // Om du vill återställa animationen när den lämnar viewporten:
-    return () => {
-      animate(
-        target,
-        { opacity: 0, scale: 0.5 },
-        { duration: 1 }
-      );
-    };
   });
 </script>
 
