@@ -82,12 +82,50 @@ import thumbsup from "../assets/images/thumbsup.png";
 	 <Button>FAQ</Button>
 </section>
 
+<!-- bild + scroll based h1 med alpine.js koder-->
+<!-- <section 
+  x-data="{ scrollY: 0 }" 
+  x-init="scrollY = window.scrollY; window.addEventListener('scroll', () => scrollY = window.scrollY)" 
+  class="relative overflow-hidden h-screen"
+>
+	<img class="w-full object-cover" src="/atlanticosprey.jpg" alt="Maritime Rescue image">
+	  <h1 
+    class="absolute md:bottom-0 md:left-[850px] text-h1Sm md:text-h1Md lg:text-h1 font-black text-white/80 transition-transform duration-100" 
+    :style="`transform: translateX(-${scrollY * 0.2}px)`"
+  >
+    EXCEPTIVE
+  </h1>
+</section> --><section 
+  x-data="{ 
+    scrollY: 0,
+    scrollFactor: window.innerWidth >= 768 ? 0.2 : 0.05 
+  }" 
+  x-init="
+    scrollY = window.scrollY; 
+    window.addEventListener('scroll', () => scrollY = window.scrollY); 
+    window.addEventListener('resize', () => {
+      scrollFactor = window.innerWidth >= 768 ? 0.2 : 0.05
+    })
+  " 
+  class="relative h-screen overflow-hidden"
+>
+  <!-- Bild -->
+  <img class="w-full h-full object-cover" src="/atlanticosprey.jpg" alt="Maritime Rescue image">
 
-<section class="relative">
-	<!-- bild + scroll based h1 -->
-	<img class="w-full" src="/atlanticosprey.jpg" alt="Maritime Rescue image">
-	<h1 class="absolute bottom-0 left-0 text-h1Sm md:text-h1Md lg:text-h1 font-black text-white/80">EXCEPTIVE</h1>
+  <!-- Rubrik -->
+  <h1 
+    class="absolute bottom-6 left-4 md:bottom-0 md:left-[850px] 
+           text-h1Sm md:text-h1Md lg:text-h1 font-black text-white/80 z-10 
+           transition-transform duration-100"
+    :style="`transform: translateX(-${scrollY * scrollFactor}px)`"
+  >
+    EXCEPTIVE
+  </h1>
 </section>
+
+
+
+
 
 
 <section >
