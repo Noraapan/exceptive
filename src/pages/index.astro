@@ -7,7 +7,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 ---
 <MainLayout title="Titel">
-  <div class="fixed inset-0 z-[-1] bg-[url('/bg_grid.svg'),url('/bg_blue.jpg')] bg-repeat bg-center bg-cover"></div>
+ <div id="bg-parallax" class="absolute inset-0 z-[-1] bg-[url('/bg_grid.svg'),url('/bg_blue.jpg')] bg-repeat bg-center bg-cover will-change-transform"></div>
 
 
 <section id="hero" class="h-screen ">
@@ -277,23 +277,17 @@ import thumbsup from "../assets/images/thumbsup.png";
 </section>
 
 </MainLayout>
-
 <script>
-  import { animate, scroll, inView } from "motion";
+  const bg = document.getElementById('bg-parallax');
 
-  inView(".scrollfade-video", () => {
-    // starta scrollbaserad animation först när videon är i view
-    scroll(
-      animate(".scrollfade-video", {
-        opacity: [0, 1],
-        scale: [0.5, 1],
-      }),
-      {
-        target: document.querySelector(".scrollfade"),
-        offset: ["start end", "start start"],
-        scrub: true,
-      }
-    );
+  document.addEventListener('mousemove', (e) => {
+    const { innerWidth: w, innerHeight: h } = window;
+    const offsetX = (e.clientX - w / 2) / 40; // Ju större tal, desto mindre rörelse
+    const offsetY = (e.clientY - h / 2) / 40;
+
+    bg.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
   });
 </script>
+
+
 
