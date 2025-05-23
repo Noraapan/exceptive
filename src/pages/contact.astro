@@ -4,7 +4,7 @@ import Button from '../components/Button.astro';
 ---
 <MainLayout title="Titel">
   <div class="fixed inset-0 z-[-1] bg-[url('/bg_grid.svg'),url('/bg_blue.jpg')] bg-repeat bg-center bg-cover"></div>
- <section>
+ <section class="text-white h-screen">
  <article class="pt-4xl grid md:grid-cols-2">
         <div class="pl-sm md:pl-m lg:pl-lg">
             <h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2">Get <span class="font-regular">in touch</span></h2>
@@ -18,7 +18,7 @@ import Button from '../components/Button.astro';
     method="POST"
     data-netlify="true" 
     action="/thankyou"
-    class="bg-blue-500 font-orbitron text-bodyDeco text-white p-6 grid gap-4 grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto"
+    class="font-orbitron text-bodyDeco text-white p-6 grid gap-4 grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto"
   >
     <!-- Steg 2: döljer input med formnamnet -->
     <input type="hidden" name="form-name" value="contact" />
