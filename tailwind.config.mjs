@@ -8,6 +8,17 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,ts,tsx,vue,svelte,md,mdx}"],
   theme: {
     extend: {
+      animation: {
+        "scroll-down": "scrollDown 1.5s infinite",
+      },
+      keyframes: {
+        scrollDown: {
+          "0%": { transform: "translateY(-32px)" },
+          "50%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(65px)" },
+        },
+      },
+
       colors: {
         black: {
           50: "#E6E6E6FF",
