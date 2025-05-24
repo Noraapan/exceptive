@@ -10,14 +10,20 @@ import thumbsup from "../assets/images/thumbsup.png";
 <MainLayout title="Titel">
   <div class="fixed inset-0 z-[-1] bg-[url('/bg_grid.svg'),url('/bg_blue.jpg')] bg-repeat bg-center bg-cover"></div>
 
-<section id="hero" class="h-screen 2xl:pt-4xl text-white">
-	<!-- hero med båt som rör sig -->
+<section id="hero" class="h-screen 2xl:pt-4xl text-white flex flex-col justify-between">
+
 	<div class="text-white">
     <h2 class="text-h2Sm md:text-h2Md lg:text-h2 pt-4xl pl-sm md:pl-m lg:pl-lg">High-Speed <span class="font-black">Navigation</span><br /><span class="font-black">Maritime</span> Expertise</h2>
 	  <p class="my-2xl font-black text-bodySm md:text-body pl-sm md:pl-m lg:pl-lg">Hands-on training for fast-boat operations, navigation & rescue.</p>
-	  <div class="flex justify-end pr-sm md:pr-m lg:pr-lg"><Button variant="primary" size="medium" href="/contact">Contact</Button></div>
+
 	</div>
+
+  	  <div class="flex justify-end pr-sm md:pr-m lg:pr-lg pb-sm md:pg-m lg:pb-lg">
+      <Button variant="primary" size="medium" href="/contact">Contact
+      </Button>
+    </div>
 </section>
+
  <!-- Scroll-indikationen -->
 <div class="relative h-20 z-50">
   <div class="fixed bottom-[139px] left-6 w-0.5 h-lg bg-black-300 overflow-hidden -mb-9">
