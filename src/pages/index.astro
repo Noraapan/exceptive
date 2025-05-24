@@ -86,44 +86,22 @@ import thumbsup from "../assets/images/thumbsup.png";
   <img src="/2025_fade.png" alt="2025 background" class="w-full h-auto" />
 
 
-  <div class="absolute inset-0 flex flex-col justify-start pl-sm md:pl-m lg:pl-lg text-white">
-    <h1 class="text-h1Sm md:text-h1Md lg:text-h1">2025</h1>
-    <h2 class="text-h2Sm md:text-h2 lg:text-h2">
+  <div class="absolute inset-0 pl-sm md:pl-m lg:pl-lg text-white">
+    <h1 class="text-h1Sm md:text-h1Md lg:text-h1 pt-4xl md:pt-6xl lg:pt-8xl">2025</h1>
+    <h2 class="text-h2Sm md:text-h2 lg:text-h2 ">
       <span class="font-black">Advance</span> your <br> maritime <span class="font-black">training</span>
     </h2>
-    <p class="text-bodySm lg:text-body font-black">Book your tailored training experience now and prepare for real-world high-speed operations.</p>
+    <p class="text-bodySm lg:text-body font-black">Book your tailored training experience now and prepare for<br>real-world high-speed operations.</p>
     <p class="text-bodySm md:text-bodyDeco font-black">Start planning your 2025 sessions today.</p>
-    <Button variant="primary" size="medium" href="/contact">Contact</Button>
+    <div class="pt-4xl">
+    <Button variant="primary" size="medium" href="/contact" >Contact</Button>
+    </div>
   </div>
 </section>
 
 
 
-<!--utan animation: <section>
-	
-	 <h2 class="text-h2Sm md:text-h2 lg:text-h2 pl-sm md:pl-m lg:pl-lg font-black">Goals <span class="font-regular">reached</span></h2>
-	 <div class="flex justify-center">
-		<article class="grid md:grid-cols-2 gap-s">
-			<div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/red.jpg')] hover:bg-cover hover:bg-center rounded-9">
-				<h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black ">COARSES HELD WITH EXCEPTIVE</h3>
-				<h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2 text-center">139</h2>
-			</div> 
-			<div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/greenpeace.jpg')] hover:bg-cover hover:bg-center rounded-9">
-				<h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black ">HAPPY <br>CONTESTANTS</h3>
-				<h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2 text-center">211</h2>
-			</div>
-			<div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/pellep.jpg')] hover:bg-cover hover:bg-center rounded-9">
-				<h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black ">YEARLY TRAINING SESSIONS</h3>
-				<h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2 text-center">16</h2>
-			</div>
-			<div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/highlandfate.jpg')] hover:bg-cover hover:bg-center rounded-9">
-				<h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black ">MARINE SAFETY COMPLIANCE</h3>
-				<h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2 text-center">100%</h2>
-			</div>
-		</article>
-	 </div>
-	 <Button>FAQ</Button>
-</section>   -->
+
 <section>
   <h2 class="text-h2Sm md:text-h2 lg:text-h2 pl-sm md:pl-m lg:pl-lg font-black text-white mb-2xl">
     Goals <span class="font-regular">reached</span>
@@ -179,20 +157,6 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 </section> 
 
-<!-- bild + scroll based h1 med alpine.js koder-->
-<!-- <section 
-  x-data="{ scrollY: 0 }" 
-  x-init="scrollY = window.scrollY; window.addEventListener('scroll', () => scrollY = window.scrollY)" 
-  class="relative overflow-hidden h-screen"
->
-	<img class="w-full object-cover" src="/atlanticosprey.jpg" alt="Maritime Rescue image">
-	  <h1 
-    class="absolute md:bottom-0 md:left-[850px] text-h1Sm md:text-h1Md lg:text-h1 font-black text-white/80 transition-transform duration-100" 
-    :style="`transform: translateX(-${scrollY * 0.2}px)`"
-  >
-    EXCEPTIVE
-  </h1>
-</section> -->
 <section 
   x-data="{ 
     scrollY: 0,
