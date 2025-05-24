@@ -10,12 +10,22 @@ export default {
     extend: {
       animation: {
         "scroll-down": "scrollDown 1.5s infinite",
+        rotate: "rotate 1s ease-in-out forwards",
+        slideBottom: "slideBottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both",
       },
       keyframes: {
         scrollDown: {
           "0%": { transform: "translateY(-32px)" },
           "50%": { transform: "translateY(0)" },
           "100%": { transform: "translateY(65px)" },
+        },
+        rotate: {
+          "0%": { transform: "rotateX(0)" },
+          "100%": { transform: "rotateX(-360deg)" },
+        },
+        slideBottom: {
+          "0%": { transform: "translateY(-100px)" },
+          "100%": { transform: "translateY(0)" },
         },
       },
 
