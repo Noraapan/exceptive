@@ -107,7 +107,7 @@ export default {
         h1Md: ["110px", { lineHeight: "auto", letterSpacing: "0px" }],
         h2Md: ["56px", { lineHeight: "91px", letterSpacing: "0px" }],
         h1Sm: ["50px", { lineHeight: "auto", letterSpacing: "0px" }],
-        h2Sm: ["28px", { lineHeight: "auto", letterSpacing: "0px" }],
+        h2Sm: ["28px", { lineHeight: "32px", letterSpacing: "0px" }],
         h3Sm: ["18px", { lineHeight: "auto", letterSpacing: "0px" }],
         bodySm: ["12px", { lineHeight: "auto", letterSpacing: "0px" }],
         linkSm: ["10px", { lineHeight: "auto", letterSpacing: "0px" }],
