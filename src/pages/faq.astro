@@ -7,13 +7,13 @@ import FaqInfo from '../components/FaqInfo.astro'
 <MainLayout title="Titel">
     
     <div class="flex justify-between pt-4xl pr-sm md:pr-m lg:pr-6xl">
-   <h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2 pl-sm md:pl-m lg:pl-lg text-blue-500">FAQ</h2>
-    <div  class="pt-s"><Button variant="thirdly" size="small" href="#general">General</Button></div>
+   <h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2  2xl:pt-4xl pl-sm md:pl-m lg:pl-lg text-blue-500">FAQ</h2>
+    <!-- <div  class="pt-s"><Button variant="thirdly" size="small" href="#general">General</Button></div>
     <div  class="pt-s"><Button variant="thirdly" size="small" href="#courses">Courses</Button></div>
     <div  class="pt-s"><Button variant="thirdly" size="small" href="#facilities">Facilities</Button></div>
-    <div  class="pt-s"><Button variant="thirdly" size="small" href="#booking">Booking</Button></div>
+    <div  class="pt-s"><Button variant="thirdly" size="small" href="#booking">Booking</Button></div> -->
     </div>
-    <section id="general">
+    <section id="general" class="md:pt-lg" >
        <div class="pt-0 md:pt-xl md:grid grid-cols-2">
         <h2 class="pt-xl md:sticky top-0 self-start font-black text-h2Sm md:text-h2Md lg:text-h2 pl-sm md:pl-m lg:pl-lg text-blue-500">General</h2> 
         <div class="pr-sm md:pr-m lg:pr-lg">
@@ -27,7 +27,7 @@ import FaqInfo from '../components/FaqInfo.astro'
        </div>
     </section>
 
-    <section id="courses" class="">
+    <section id="courses" class="md:pt-lg">
        <div class="pt-0 md:pt-xl md:grid grid-cols-2">
       <h2 class="md:order-2 pt-xl md:sticky top-0 self-start text-right font-black text-h2Sm md:text-h2Md lg:text-h2 pr-sm md:pr-m lg:pr-lg text-blue-500">Courses &<br><span class="font-regular">Consulting</span></h2> 
         <div class="pl-sm md:pl-m lg:pl-lg">
@@ -39,7 +39,7 @@ import FaqInfo from '../components/FaqInfo.astro'
        </div>
     </section>
 
-        <section id="facilities">
+        <section id="facilities" class="md:pt-lg">
        <div class="pt-0 md:pt-xl md:grid grid-cols-2">
         <h2 class="pt-xl md:sticky top-0 self-start font-black text-h2Sm md:text-h2Md lg:text-h2 pl-sm md:pl-m lg:pl-lg text-blue-500">Facilities &<br><span class="font-regular">Rental</span></h2> 
         <div class="pr-sm md:pr-m lg:pr-lg">
@@ -51,7 +51,7 @@ import FaqInfo from '../components/FaqInfo.astro'
        </div>
     </section>
 
-    <section id="booking">
+    <section id="booking" class="md:pt-lg" >
        <div class="pt-0 md:pt-xl md:grid grid-cols-2">
          <h2 class="md:order-2 pt-xl md:sticky top-0 self-start text-right font-black text-h2Sm md:text-h2Md lg:text-h2 pr-sm md:pr-m lg:pr-lg text-blue-500">Booking &<br><span class="font-regular">Practical info</span></h2> 
         <div class="pl-sm md:pl-m lg:pl-lg">
