@@ -4,7 +4,11 @@ import Button from '../components/Button.astro';
 ---
 
 <MainLayout title="Titel">
-    <div class="fixed inset-0 z-[-1] bg-[url('/bg_grid.svg'),url('/bg_blue.jpg')] bg-repeat bg-center bg-cover"></div>
+<div class="fixed inset-0 z-[-1] bg-[url('/bg_blue.jpg')] bg-repeat bg-center bg-cover">
+  </div>
+   <div id="grid-bg" class="fixed inset-0 z-[-1] pointer-events-none">
+  <img src="/bg_grid.svg" class="w-full h-full object-cover transition-transform duration-75" />
+  </div>
 
 <section class="bg-[url('/rental_fade.png')] bg-cover bg-center h-screen 2xl:pt-4xl text-white flex flex-col justify-between">
 <h2 class="pt-4xl font-black text-h2Sm md:text-h2Md lg:text-h2 pl-sm md:pl-m lg:pl-lg">Aspö <br /><span class="font-regular">rental</span></h2>
@@ -16,7 +20,7 @@ import Button from '../components/Button.astro';
 Whether you're here for rest or adventure, we offer two cozy island houses for rent:</p>
 </section>
 
-<section class=" text-white">
+<section class=" text-white pb-sm md:pb-m lg:pb-lg">
     <div class="px-sm md:px-m lg:px-lg">
 <div class="grid lg:grid-cols-2 pt-lg md:pt-4xl lg:pt-8xl">
         <div class="flex flex-col justify-between lg:order-2 px-sm md:px-m lg:px-lg pb-sm md:pb-0">
@@ -33,7 +37,7 @@ Whether you're here for rest or adventure, we offer two cozy island houses for r
 </div>
 
 
-<div class="grid lg:grid-cols-2 py-lg md:py-4xl lg:py-8xl">
+<div class="grid lg:grid-cols-2 pt-lg md:pt-4xl lg:pt-8xl">
         <div class="flex flex-col justify-between pr-sm md:pr-m lg:pr-lg">
             <div>
         <h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2">House<br /><span class="font-regular">Bravo</span></h2>
@@ -51,3 +55,34 @@ Whether you're here for rest or adventure, we offer two cozy island houses for r
 </div>
 </section>
 </MainLayout>
+
+<script>
+  const grid = document.getElementById('grid-bg');
+  let targetX = 0;
+  let targetY = 0;
+  let currentX = 0;
+  let currentY = 0;
+
+
+  document.addEventListener('mousemove', (e) => {
+    const ratioX = (e.clientX / window.innerWidth - 0.5);
+    const ratioY = (e.clientY / window.innerHeight - 0.5);
+
+
+    targetX = ratioX * 30; 
+    targetY = ratioY * 30;
+  });
+
+
+  function animateGrid() {
+
+    currentX += (targetX - currentX) * 0.08;
+    currentY += (targetY - currentY) * 0.08;
+
+    grid.style.transform = `translate(${currentX}px, ${currentY}px)`;
+
+    requestAnimationFrame(animateGrid);
+  }
+
+  animateGrid();
+</script>

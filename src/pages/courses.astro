@@ -4,7 +4,11 @@ import Button from '../components/Button.astro';
 ---
 
 <MainLayout title="Titel">
-    <div class="fixed inset-0 z-[-1] bg-[url('/bg_grid.svg'),url('/bg_blue.jpg')] bg-repeat bg-center bg-cover "></div>
+    <div class="fixed inset-0 z-[-1] bg-[url('/bg_blue.jpg')] bg-repeat bg-center bg-cover">
+  </div>
+   <div id="grid-bg" class="fixed inset-0 z-[-1] pointer-events-none">
+  <img src="/bg_grid.svg" class="w-full h-full object-cover transition-transform duration-75" />
+  </div>
 
 <section class="bg-[url('/training_fade.png')] bg-cover bg-center h-screen 2xl:pt-4xl text-white flex flex-col justify-between">
 <h2 class="pt-4xl font-black text-h2Sm md:text-h2Md lg:text-h2 pl-sm md:pl-m lg:pl-lg">Specialized <br /><span class="font-regular">Maritime Training</span></h2>
@@ -37,7 +41,7 @@ import Button from '../components/Button.astro';
     <p class="mt-s font-black text-bodySm md:text-body w-8xl sm:w-auto 2xl:w-[710px]">Master advanced radar usage, silhouette navigation, tactical approaches, and fast-paced decision-making in high-risk scenarios.</p>
     </div>
 </div>
-    <div class="flex flex-center p-s lg:p-0"><img class="object-cover" src="/greenpeace.jpg" alt="rental house 2"></div>
+    <div class="flex flex-center p-s lg:p-0"><img class="object-cover" src="/GP02IKO.jpg" alt="rental house 2"></div>
 </div>
 
 <div class="grid lg:grid-cols-2 pt-lg md:pt-4xl lg:pt-8xl">
@@ -47,7 +51,7 @@ import Button from '../components/Button.astro';
     <p class="mt-s font-black text-bodySm md:text-body w-8xl sm:w-auto 2xl:w-[710px]">Tactical and technical SAR training, with a focus on coordination, communication, and life-saving procedures at sea.</p>
         </div>
     </div>
-     <div class="flex flex-center p-s lg:p-0"><img class="object-cover" src="/greenpeace.jpg" alt="rental house 1"></div>
+     <div class="flex flex-center p-s lg:p-0"><img class="object-cover" src="/GP01A4M.jpg" alt="rental house 1"></div>
 </div>
 
 <div class="grid lg:grid-cols-2 pt-lg md:pt-4xl lg:pt-8xl">
@@ -57,17 +61,48 @@ import Button from '../components/Button.astro';
     <p class="mt-s font-black text-bodySm md:text-body w-8xl sm:w-auto 2xl:w-[710px]">Develop driving skills in rough seas, at night, or under pressure. Focused on safety, precision, and full control at high speeds.</p>
     </div>
 </div>
-    <div class="flex flex-center p-s lg:p-0"><img class="object-cover" src="/greenpeace.jpg" alt="rental house 2"></div>
+    <div class="flex flex-center p-s lg:p-0"><img class="object-cover" src="/GP0ICZ.JPG" alt="rental house 2"></div>
 </div>
 <div class="grid lg:grid-cols-2 pt-lg md:pt-4xl lg:pt-8xl">
         <div class="lg:order-2 px-sm md:px-m lg:px-lg pb-sm md:pb-0">
             <div>
         <h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2">Interception<br /><span class="font-regular">Tactics</span></h2>
-    <p class="mt-s font-black text-bodySm md:text-body w-8xl sm:w-auto 2xl:w-[710px]"> Train in close-quarter tactics, interception of vessels, and secure boarding procedures for both law enforcement and special operations.</p>
+    <p class="mt-s font-black text-bodySm md:text-body w-8xl sm:w-auto 2xl:w-[710px]">Train in close-quarter tactics, interception of vessels, and secure boarding procedures for both law enforcement and special operations.</p>
         </div>
     </div>
-     <div class="flex flex-center p-s lg:p-0"><img class="object-cover" src="/greenpeace.jpg" alt="rental house 1"></div>
+     <div class="flex flex-center p-s lg:p-0"><img class="object-cover" src="/highlandfate.jpg" alt="rental house 1"></div>
 </div>
 </div>
 </section>
 </MainLayout>
+
+<script>
+  const grid = document.getElementById('grid-bg');
+  let targetX = 0;
+  let targetY = 0;
+  let currentX = 0;
+  let currentY = 0;
+
+
+  document.addEventListener('mousemove', (e) => {
+    const ratioX = (e.clientX / window.innerWidth - 0.5);
+    const ratioY = (e.clientY / window.innerHeight - 0.5);
+
+
+    targetX = ratioX * 30; 
+    targetY = ratioY * 30;
+  });
+
+
+  function animateGrid() {
+
+    currentX += (targetX - currentX) * 0.08;
+    currentY += (targetY - currentY) * 0.08;
+
+    grid.style.transform = `translate(${currentX}px, ${currentY}px)`;
+
+    requestAnimationFrame(animateGrid);
+  }
+
+  animateGrid();
+</script>
