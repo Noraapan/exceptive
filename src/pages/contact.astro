@@ -3,7 +3,11 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 ---
 <MainLayout title="Titel">
-  <div class="fixed inset-0 z-[-1] bg-[url('/bg_grid.svg'),url('/bg_blue.jpg')] bg-repeat bg-center bg-cover"></div>
+   <div class="fixed inset-0 z-[-1] bg-[url('/bg_blue.jpg')] bg-repeat bg-center bg-cover"></div>
+   <div id="grid-bg" class="fixed inset-0 z-[-1] pointer-events-none">
+  <img src="/bg_grid.svg" class="w-full h-full object-cover transition-transform duration-75" />
+  </div>
+  
  <section class="text-white min-h-screen 2xl:pt-4xl">
  <article class="pt-4xl grid md:grid-cols-2">
         <div class="pl-sm md:pl-m lg:pl-lg">
@@ -75,3 +79,34 @@ import Button from '../components/Button.astro';
      </article>
      </section>
 </MainLayout>
+
+<script>
+  const grid = document.getElementById('grid-bg');
+  let targetX = 0;
+  let targetY = 0;
+  let currentX = 0;
+  let currentY = 0;
+
+
+  document.addEventListener('mousemove', (e) => {
+    const ratioX = (e.clientX / window.innerWidth - 0.5);
+    const ratioY = (e.clientY / window.innerHeight - 0.5);
+
+
+    targetX = ratioX * 30; 
+    targetY = ratioY * 30;
+  });
+
+
+  function animateGrid() {
+
+    currentX += (targetX - currentX) * 0.08;
+    currentY += (targetY - currentY) * 0.08;
+
+    grid.style.transform = `translate(${currentX}px, ${currentY}px)`;
+
+    requestAnimationFrame(animateGrid);
+  }
+
+  animateGrid();
+</script>
