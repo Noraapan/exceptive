@@ -409,18 +409,3 @@ inView(".fadein-more-delay", ({ target }) => {
 });
 
 </script>
-<script>
-import { inView, animate, stagger } from "motion";
-
-inView("#stagger", () => {
-  animate(
-    ".staggeranimation img",
-    { opacity: [0, 1], y: [-40, 0] },  // både opacity och y
-    {
-      duration: 1.5,
-      delay: stagger(0.3, { start: 0 })  // 0.3s mellan varje bild, börjar direkt
-    }
-  );
-});
-
-</script>
