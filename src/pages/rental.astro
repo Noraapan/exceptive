@@ -1,6 +1,9 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import { Image } from 'astro:assets';
+import anna from "../assets/images/anna2.webp"
+import bravo from "../assets/images/bravo1.webp"
 ---
 
 <MainLayout title="Rental">
@@ -34,7 +37,9 @@ import Button from '../components/Button.astro';
         <Button variant="primary" size="medium" href="https://www.airbnb.se/rooms/36550320?viralityEntryPoint=1&s=76" target="_blank">Booking</Button>
         </div>
     </div>
-     <div class="flex flex-center md:p-s lg:p-0"><img class="object-cover rounded-9" src="/anna2.webp" alt="rental house 1"></div>
+     <div class="flex flex-center md:p-s lg:p-0">
+        <Image src={anna} class="object-cover rounded-9" alt="rental house 1"/>
+    </div>
 </div>
 
 
@@ -48,7 +53,9 @@ import Button from '../components/Button.astro';
         <Button variant="primary" size="medium" href="https://www.airbnb.se/rooms/36550320?viralityEntryPoint=1&s=76" target="_blank">Booking</Button>
     </div>
 </div>
-    <div class="flex flex-center md:p-s lg:p-0"><img class="object-cover rounded-9" src="/bravo1.webp" alt="rental house 2"></div>
+    <div class="flex flex-center md:p-s lg:p-0">
+        <Image src={bravo} class="object-cover rounded-9" alt="rental house 2"/>
+    </div>
 </div>
 
 
