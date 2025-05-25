@@ -77,10 +77,10 @@ import thumbsup from "../assets/images/thumbsup.png";
 	<!-- highspeed med fyra bilder -->
 	 <h2 class="text-h2Sm md:text-h2 lg:text-h2 pl-sm md:pl-m lg:pl-lg">High-speed <span class="font-black">Navigation</span></h2>
 	 <div class="grid grid-cols-4 gap-4">
-		<img src="atlanticosprey.jpg" alt="" class=" mt-8xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
-		<img src="GP0ICZ.JPG" alt="" class="mt-6xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
-		<img src="GP01A4M.jpg" alt="" class="mt-4xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
-		<img src="GP01HGO.jpg" alt="" class="mt-1xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
+		<img src="atlanticosprey.jpg" alt="" class="fadeDown mt-8xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
+		<img src="GP0ICZ.JPG" alt="" class="fadeDown mt-6xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
+		<img src="GP01A4M.jpg" alt="" class="fadeDown mt-4xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
+		<img src="GP01HGO.jpg" alt="" class="fadeDown mt-1xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
 	</div>
 	<h2 class="text-h2Sm md:text-h2 lg:text-h2 pr-sm md:pr-m lg:pr-lg text-right"><span class="font-black">Maritime</span> Expertise</h2>
 </section>
@@ -343,6 +343,18 @@ inView(".fadein-more-delay", ({ target }) => {
 
   return () => {
     animate(target, { opacity: 0, y: 40 });
+  };
+});
+
+</script>
+<script>
+import { inView, animate } from "motion";
+
+inView(".fadeDown", (el) => {
+  animate(el, { opacity: [0, 1], y: [40, 0] }, { duration: 1.5 });
+
+  return () => {
+    animate(el, { opacity: 0, y: 40 });
   };
 });
 
