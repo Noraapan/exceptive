@@ -16,34 +16,33 @@ import Button from '../components/Button.astro';
         </div>
       <!--   form  -->
     
-     <div class="">
+     <div>
   <form 
     name="contact" 
     method="POST"
     data-netlify="true" 
     action="/thankyou"
-    class="font-orbitron text-bodyDeco text-white p-6 grid gap-4 grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto"
-  >
-    <!-- Steg 2: döljer input med formnamnet -->
+    class="font-orbitron text-bodyDeco text-white p-6 grid gap-4 md:grid-cols-2 max-w-4xl mx-auto">
+    
     <input type="hidden" name="form-name" value="contact" />
 
     <div class="col-span-2">
-      <label class="block text-sm font-bold mb-1">Full name</label>
+      <label class=" text-sm font-black mb-1">Full name</label>
       <input type="text" name="fullname" class="w-full border border-white bg-transparent p-2 text-white placeholder-white" placeholder="Your name" required />
     </div>
 
     <div>
-      <label class="block text-sm font-bold mb-1">E-mail</label>
+      <label class=" text-sm font-black mb-1">E-mail</label>
       <input type="email" name="email" class="w-full border border-white bg-transparent p-2 text-white placeholder-white" placeholder="you@example.com" required />
     </div>
 
     <div>
-      <label class="block text-sm font-bold mb-1">Phone</label>
+      <label class=" text-sm font-black mb-1">Phone</label>
       <input type="tel" name="phone" class="w-full border border-white bg-transparent p-2 text-white placeholder-white" placeholder="+46 700 000 000" />
     </div>
 
     <div>
-      <label class="block text-sm font-bold mb-1">Select profile</label>
+      <label class=" text-sm font-black mb-1">Select profile</label>
       <select name="profile" class="w-full border border-white bg-transparent p-2 text-white" required>
         <option value="" class="bg-blue-500" disabled selected>Choose...</option>
         <option value="Government" class="bg-blue-500">Government</option>
@@ -55,7 +54,7 @@ import Button from '../components/Button.astro';
     </div>
 
     <div>
-      <label class="block text-sm font-bold mb-1">Country</label>
+      <label class=" text-sm font-black mb-1">Country</label>
       <select name="country" class="w-full border border-white bg-transparent p-2 text-white" required>
         <option value="" disabled selected>Choose country...</option>
         <option value="Sweden" class="bg-blue-500">Sweden</option>
@@ -67,7 +66,7 @@ import Button from '../components/Button.astro';
     </div>
 
     <div class="col-span-2">
-      <label class="block text-sm font-bold mb-1">Tell us more</label>
+      <label class=" text-sm font-black mb-1">Tell us more</label>
       <textarea name="message" class="w-full border border-white bg-transparent p-2 text-white placeholder-white" rows="4" placeholder="Your message..."></textarea>
     </div>
 
