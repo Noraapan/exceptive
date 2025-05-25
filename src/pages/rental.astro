@@ -16,7 +16,7 @@ import Button from '../components/Button.astro';
     <p class="md:text-right font-black text-bodySm md:text-body px-sm md:px-m lg:px-lg text-focus-in delayed">Welcome to Aspö - an island where peaceful nature<br>meets high-speed adventure.
 </section>
 <section class="flex justify-center text-white pt-sm md:pt-m lg:pt-lg px-sm md:px-m lg:px-lg">
-    <p class="text-center font-black text-bodySm md:text-body w-auto md:w-[710px]">Calm beaches, forest walks, or 35-knot RIB rides with guides who train police and Greenpeace crews—whether it's peace or adrenaline, we offer two cozy island houses for rent:
+    <p class="text-center font-black text-bodySm md:text-body w-auto md:w-[710px] fadein">Calm beaches, forest walks, or 35-knot RIB rides with guides who train police and Greenpeace crews—whether it's peace or adrenaline, we offer two cozy island houses for rent:
 
 </p>
 </section>
@@ -25,7 +25,7 @@ import Button from '../components/Button.astro';
     <div class="px-sm md:px-m lg:px-lg">
 <div class="grid lg:grid-cols-2 pt-lg md:pt-4xl lg:pt-8xl">
         <div class="flex flex-col justify-between lg:order-2   md:pb-0">
-            <div class="md:px-m lg:px-lg">
+            <div class="md:px-m lg:px-lg fadein">
         <h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2">House<br /><span class="font-regular">Anna</span></h2>
     <p class="mt-s font-black text-bodySm md:text-body sm:w-auto 2xl:w-[710px]">A newly built, bright and spacious home with open-plan layout. Sleeps 4-6 people, with beds on both floors and large windows facing open meadows. Outside, a wooden deck lets you relax in the sun and enjoy the stillness.
         Great for families or small groups. </p>
@@ -40,7 +40,7 @@ import Button from '../components/Button.astro';
 
 <div class="grid lg:grid-cols-2 pt-lg md:pt-4xl lg:pt-8xl">
         <div class="flex flex-col justify-between md:pb-0">
-            <div class="md:pr-m lg:pr-lg">
+            <div class="md:pr-m lg:pr-lg fadein">
         <h2 class="font-black text-h2Sm md:text-h2Md lg:text-h2">House<br /><span class="font-regular">Bravo</span></h2>
     <p class="mt-s font-black text-bodySm md:text-body sm:w-auto 2xl:w-[710px]">Perfect for couples or a smaller group. Cozy, simple, and surrounded by nature. Can be rented on its own or together with the main house for extra space and privacy.</p>
     </div>
@@ -86,4 +86,25 @@ import Button from '../components/Button.astro';
   }
 
   animateGrid();
+</script>
+
+
+<script>
+    import { inView } from "motion";
+    import { animate } from "motion";
+
+    inView(".fadein", ({ target }) => {
+  animate(
+    target,
+    { opacity: [0, 1], y: [40, 0] },
+    { duration: 1.5 }
+  );
+
+  return () => {
+    animate(
+      target,
+      { opacity: 0, y: 40 }
+    );
+  };
+});
 </script>
