@@ -347,15 +347,3 @@ inView(".fadein-more-delay", ({ target }) => {
 });
 
 </script>
-<script>
-import { inView, animate } from "motion";
-
-inView(".fadeDown", (el) => {
-  animate(el, { opacity: [0, 1], y: [40, 0] }, { duration: 1.5 });
-
-  return () => {
-    animate(el, { opacity: 0, y: 40 });
-  };
-});
-
-</script>
