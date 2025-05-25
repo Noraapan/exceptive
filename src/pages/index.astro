@@ -5,6 +5,16 @@ import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import atlantic from "../assets/images/atlanticosprey.webp"
+import atlantic2 from "../assets/images/GP0ICZ.webp"
+import atlantic3 from "../assets/images/GP01A4M.webp"
+import atlantic4 from "../assets/images/GP01HGO.webp"
+import goals from "../assets/images/2025_fade.webp"
+import pissa from "../assets/images/pissapadom.webp"
+import select from "../assets/images/select2.webp"
+import select2 from "../assets/images/GP01A4M.webp"
+import pellepp from "../assets/images/pellepp.webp"
+
+
 
 ---
 <MainLayout title="Exceptive">
@@ -77,19 +87,17 @@ import atlantic from "../assets/images/atlanticosprey.webp"
 	<!-- highspeed med fyra bilder -->
 	 <h2 class="text-h2Sm md:text-h2 lg:text-h2 pl-sm md:pl-m lg:pl-lg fadein">High-speed <span class="font-black">Navigation</span></h2>
 	 <div class="grid grid-cols-4 gap-4">
-		<!-- <img src="atlanticosprey.webp" alt="" class=> -->
      <Image src={atlantic} class="fadeDown4 mt-8xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9" alt="hej"/>
-		<img src="GP0ICZ.webp" alt="" class="fadeDown3 mt-6xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
-		<img src="GP01A4M.webp" alt="" class="fadeDown2 mt-4xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
-		<img src="GP01HGO.webp" alt="" class="fadeDown mt-1xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
+     <Image src={atlantic2} alt="hej" class="fadeDown3 mt-6xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9" />
+     <Image src={atlantic3} alt="hej" class="fadeDown2 mt-4xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9"/>
+      <Image src={atlantic4} alt="hej" class="fadeDown mt-1xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9"/>
 	</div>
 	<h2 class="text-h2Sm md:text-h2 lg:text-h2 pr-sm md:pr-m lg:pr-lg text-right fadein"><span class="font-black">Maritime</span> Expertise</h2>
 </section>
 
 <section class="relative w-full">
   <!-- Background image -->
-  <img src="/2025_fade.png" alt="2025 background" class="w-full h-auto" />
-
+   <Image src={goals} alt="2025 background" class="w-full h-auto" />
 
   <div class="absolute inset-0 pl-sm md:pl-m lg:pl-lg text-white">
     <h1 class="text-h1Sm md:text-h1Md lg:text-h1 pt-4xl md:pt-6xl lg:pt-8xl fadein ">2025</h1>
@@ -177,7 +185,7 @@ import atlantic from "../assets/images/atlanticosprey.webp"
   class="relative h-screen overflow-hidden"
 >
   <!-- Bild -->
-  <img class="w-full h-full object-cover" src="/atlanticosprey.webp" alt="Maritime Rescue image">
+   <Image src={atlantic} alt="2025 background" class="w-full h-auto" />
 
   <!-- Rubrik -->
   <h1 
@@ -216,9 +224,9 @@ import atlantic from "../assets/images/atlanticosprey.webp"
 
   <div class="mt-auto px-sm md:px-m lg:px-lg pb-lg">
     <div class="grid grid-cols-3 gap-4 pt-sm md:pt-m lg:pt-lg">
-		  <img src="pissapadom.webp" alt="" class="fadeDown h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
-		  <img src="select2.webp" alt="" class="fadeDown2 h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
-		  <img src="GP01A4M.webp" alt="" class="fadeDown3 h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
+      <Image src={pissa} alt="2025 background" class="fadeDown h-2xl md:h-7xl lg:h-11xl object-cover rounded-9" />
+      <Image src={select} alt="2025 background" class="fadeDown2 h-2xl md:h-7xl lg:h-11xl object-cover rounded-9"/>
+      <Image src={select2} alt="2025 background" class="fadeDown3 h-2xl md:h-7xl lg:h-11xl object-cover rounded-9" />
 	  </div>
   </div>
 </section>
@@ -237,7 +245,8 @@ import atlantic from "../assets/images/atlanticosprey.webp"
 				“I bought my first sailboat when I was 9 years old taught myself to sail.”
 			</p>
 		</div>
-    <img src="/pellepp.webp" alt="" class=" md:h-screen object-cover ">
+    
+    <Image src={pellepp} alt="2025 background" class=" md:h-screen object-cover " />
 	 </div>
 </section>
 
