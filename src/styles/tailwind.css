@@ -94,4 +94,41 @@
   animation: sail 2.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
+
+.text-focus-in {
+	-webkit-animation: text-focus-in 0.8s ease-out both;
+	        animation: text-focus-in 0.8s ease-out both;
+}
+
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.delayed {
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
 }

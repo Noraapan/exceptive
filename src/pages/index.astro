@@ -17,8 +17,8 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 <section id="hero" class="h-screen 2xl:pt-4xl text-white flex flex-col justify-between">
    <div class="text-white ">
-    <h2 class="text-h2Sm md:text-h2Md lg:text-h2 pt-4xl pl-sm md:pl-m lg:pl-lg ">High-Speed <span class="font-black">Navigation</span><br /><span class="font-black">Maritime</span> Expertise</h2>
-	  <p class="my-2xl font-black text-bodySm md:text-body pl-sm md:pl-m lg:pl-lg ">Hands-on training for fast-boat operations, navigation & rescue.</p>
+    <h2 class="text-h2Sm md:text-h2Md lg:text-h2 pt-4xl pl-sm md:pl-m lg:pl-lg text-focus-in">High-Speed <span class="font-black">Navigation</span><br /><span class="font-black">Maritime</span> Expertise</h2>
+	  <p class="my-2xl font-black text-bodySm md:text-body pl-sm md:pl-m lg:pl-lg text-focus-in delayed">Hands-on training for fast-boat operations, navigation & rescue.</p>
 
 	</div>
 
@@ -77,10 +77,10 @@ import thumbsup from "../assets/images/thumbsup.png";
 	<!-- highspeed med fyra bilder -->
 	 <h2 class="text-h2Sm md:text-h2 lg:text-h2 pl-sm md:pl-m lg:pl-lg">High-speed <span class="font-black">Navigation</span></h2>
 	 <div class="grid grid-cols-4 gap-4">
-		<img src="atlanticosprey.jpg" alt="" class="fadeDown mt-8xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
-		<img src="GP0ICZ.JPG" alt="" class="fadeDown mt-6xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
-		<img src="GP01A4M.jpg" alt="" class="fadeDown mt-4xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
-		<img src="GP01HGO.jpg" alt="" class="fadeDown mt-1xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
+		<img src="atlanticosprey.webp" alt="" class="fadeDown mt-8xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
+		<img src="GP0ICZ.webp" alt="" class="fadeDown mt-6xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
+		<img src="GP01A4M.webp" alt="" class="fadeDown mt-4xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
+		<img src="GP01HGO.webp" alt="" class="fadeDown mt-1xl h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
 	</div>
 	<h2 class="text-h2Sm md:text-h2 lg:text-h2 pr-sm md:pr-m lg:pr-lg text-right"><span class="font-black">Maritime</span> Expertise</h2>
 </section>
@@ -107,13 +107,13 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 
 <section>
-  <h2 class="text-h2Sm md:text-h2 lg:text-h2 pl-sm md:pl-m lg:pl-lg font-black text-white mb-2xl pt-sm">
+  <h2 class="text-h2Sm md:text-h2 lg:text-h2 pl-sm md:pl-m lg:pl-lg font-black text-white mb-2xl pt-sm fadein">
     Goals <span class="font-regular">reached</span>
   </h2>
   <div class="flex justify-center">
     <article class="grid md:grid-cols-2 gap-s">
 
-      <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/red.jpg')] hover:bg-cover hover:bg-center rounded-9 flex flex-col justify-between">
+      <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/red.webp')] hover:bg-cover hover:bg-center rounded-9 flex flex-col justify-between">
         <h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black text-white/85">COARSES HELD WITH EXCEPTIVE</h3>
         <h2
           x-data="{ count: 0, end: 139, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 10); } }"
@@ -123,7 +123,7 @@ import thumbsup from "../assets/images/thumbsup.png";
         ></h2>
       </div>
 
-      <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/greenpeace.jpg')] hover:bg-cover hover:bg-center rounded-9 flex flex-col justify-between">
+      <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/greenpeace.webp')] hover:bg-cover hover:bg-center rounded-9 flex flex-col justify-between">
         <h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black text-white/85">HAPPY <br>CONTESTANTS</h3>
         <h2
           x-data="{ count: 0, end: 211, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 10); } }"
@@ -133,7 +133,7 @@ import thumbsup from "../assets/images/thumbsup.png";
         ></h2>
       </div>
 
-      <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/atlanticosprey.jpg')] hover:bg-cover hover:bg-center rounded-9 flex flex-col justify-between">
+      <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/atlanticosprey.webp')] hover:bg-cover hover:bg-center rounded-9 flex flex-col justify-between">
         <h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black text-white/85">YEARLY TRAINING SESSIONS</h3>
         <h2
           x-data="{ count: 0, end: 16, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 50); } }"
@@ -143,7 +143,7 @@ import thumbsup from "../assets/images/thumbsup.png";
         ></h2>
       </div>
 
-      <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/highlandfate.jpg')] hover:bg-cover hover:bg-center rounded-9 flex flex-col justify-between">
+      <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/highlandfate.webp')] hover:bg-cover hover:bg-center rounded-9 flex flex-col justify-between">
         <h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black text-white/85">MARINE SAFETY COMPLIANCE</h3>
         <h2
           x-data="{ count: 0, end: 100, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 20); } }"
@@ -176,7 +176,7 @@ import thumbsup from "../assets/images/thumbsup.png";
   class="relative h-screen overflow-hidden"
 >
   <!-- Bild -->
-  <img class="w-full h-full object-cover" src="/atlanticosprey.jpg" alt="Maritime Rescue image">
+  <img class="w-full h-full object-cover" src="/atlanticosprey.webp" alt="Maritime Rescue image">
 
   <!-- Rubrik -->
   <h1 
@@ -215,9 +215,9 @@ import thumbsup from "../assets/images/thumbsup.png";
 
   <div class="mt-auto px-sm md:px-m lg:px-lg pb-lg">
     <div class="grid grid-cols-3 gap-4 pt-sm md:pt-m lg:pt-lg">
-		  <img src="pissapådom.jpg" alt="" class="h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
-		  <img src="select2.jpg" alt="" class="h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
-		  <img src="GP01A4M.jpg" alt="" class="h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
+		  <img src="pissapådom.webp" alt="" class="h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
+		  <img src="select2.webp" alt="" class="h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
+		  <img src="GP01A4M.webp" alt="" class="h-2xl md:h-7xl lg:h-11xl object-cover rounded-9">
 	  </div>
   </div>
 </section>
@@ -236,7 +236,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 				“I bought my first sailboat when I was 9 years old taught myself to sail.”
 			</p>
 		</div>
-    <img src="/pellepp.JPG" alt="" class=" md:h-screen object-cover ">
+    <img src="/pellepp.webp" alt="" class=" md:h-screen object-cover ">
 	 </div>
 </section>
 
