@@ -40,15 +40,15 @@ import pellepp from "../assets/images/pellepp.webp"
 
  <!-- Scroll-indikationen -->
 <div class="relative h-20 z-50">
-  <div class="fixed bottom-[139px] left-6 w-0.5 h-lg bg-black-300 overflow-hidden -mb-9">
-    <div class="w-0.5 h-[35px] bg-white animate-scroll-down"></div>
+  <div class="fixed bottom-[139px] left-6 w-0.5 h-lg bg-black-300 overflow-hidden -mb-5">
+    <div class="w-1 h-[45px] bg-white animate-scroll-down"></div>
   </div>
-  <p class="fixed bottom-2xl left-xs font-black origin-bottom-left rotate-90 text-bodySm text-white">
+  <p class="fixed bottom-3xl left-xs font-black origin-bottom-left rotate-90 text-bodySm text-white">
     Scroll down
   </p>
 </div>
-<section class="scrollfade relative overflow-clip">
   <!-- Sticky video section -->
+<section class="scrollfade relative overflow-clip">
 
   <div class="sticky top-0 h-screen w-full z-0 ">
     <video
@@ -126,7 +126,7 @@ import pellepp from "../assets/images/pellepp.webp"
       <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/red.webp')] hover:bg-cover hover:bg-center rounded-9 flex flex-col justify-between">
         <h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black text-white/85">COARSES HELD WITH EXCEPTIVE</h3>
         <h2
-          x-data="{ count: 0, end: 139, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 10); } }"
+          x-data="{ count: 0, end: 144, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 10); } }"
           x-init="observer = new IntersectionObserver((e) => { if (e[0].isIntersecting) { start(); observer.disconnect(); } }); observer.observe($el)"
           x-text="count"
           class="font-black text-h2Md lg:text-h2 text-center text-white/85 mt-auto mb-auto"
@@ -136,7 +136,7 @@ import pellepp from "../assets/images/pellepp.webp"
       <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/greenpeace.webp')] hover:bg-cover hover:bg-center rounded-9 flex flex-col justify-between">
         <h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black text-white/85">HAPPY <br>CONTESTANTS</h3>
         <h2
-          x-data="{ count: 0, end: 211, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 10); } }"
+          x-data="{ count: 0, end: 434, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 10); } }"
           x-init="observer = new IntersectionObserver((e) => { if (e[0].isIntersecting) { start(); observer.disconnect(); } }); observer.observe($el)"
           x-text="count"
           class="font-black text-h2Md lg:text-h2 text-center text-white/85 mt-auto mb-auto"
@@ -146,7 +146,7 @@ import pellepp from "../assets/images/pellepp.webp"
       <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/atlanticosprey.webp')] hover:bg-cover hover:bg-center rounded-9 flex flex-col justify-between">
         <h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black text-white/85">YEARLY TRAINING SESSIONS</h3>
         <h2
-          x-data="{ count: 0, end: 16, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 50); } }"
+          x-data="{ count: 0, end: 5, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 50); } }"
           x-init="observer = new IntersectionObserver((e) => { if (e[0].isIntersecting) { start(); observer.disconnect(); } }); observer.observe($el)"
           x-text="count"
           class="font-black text-h2Md lg:text-h2 text-center text-white/85 mt-auto mb-auto"
@@ -235,20 +235,23 @@ import pellepp from "../assets/images/pellepp.webp"
 
 <section>
 	<!-- founder -->
-	 <div class="lg:grid grid-cols-2">
+	 <div class="lg:grid grid-cols-2 text-white">
 		
-		<div class="px-sm md:px-m lg:px-lg  text-white pt-sm md:pt-m lg:pt-lg md:order-2">
+		<div class="px-sm md:px-m lg:px-lg pt-sm md:pt-m lg:pt-lg md:order-2">
 			<h2 class="text-h2Sm md:text-h2 lg:text-h2 pt-s max-w-full overflow-hidden fadein">Founder<br><span class="font-black">Pelle Pettersson</span></h2>
-			<p class=" text-bodySm lg:text-body font-black pt-s fadein-delay">
-				With decades of experience in high-speed maritime operations, tactical navigation, and specialized training, the founder of Exceptive brings unmatched expertise to the field. From training elite units and security forces to crafting tailored programs for civilian professionals, he's driven by a mission to elevate maritime performance.
-			</p>
-			<p class=" text-bodySm lg:text-body font-black mt-3xl pb-sm md:pb-m lg:pb-lg fadein-more-delay">
-				“I bought my first sailboat when I was 9 years old taught myself to sail.”
-			</p>
+			<p class="pb-sm md:pg-m lg:pb-lg text-bodySm lg:text-body font-black pt-s fadein-delay">
+				With decades of experience in high-speed maritime operations, tactical navigation, and specialized training, the founder of Exceptive brings unmatched expertise to the field. <br><br> From training elite units and security forces to crafting tailored programs for civilian professionals, he's driven by a mission to elevate maritime performance.
+			</p> 
 		</div>
-    
+
+    <div class="relative">
     <Image src={pellepp} alt="Founder of Exceptive, Pelle Pettersson" class=" md:h-screen object-cover " />
+    <p class="absolute bottom-24 left-1/2 -translate-x-1/2 text-bodySm lg:text-body font-black fadein-more-delay">
+				“I bought my first sailboat when I was 9 years old and taught myself to sail.”
+			</p>
 	 </div>
+
+   </div>
 </section>
 
 </MainLayout>
