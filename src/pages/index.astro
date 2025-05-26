@@ -126,7 +126,7 @@ import pellepp from "../assets/images/pellepp.webp"
       <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/red.webp')] hover:bg-cover hover:bg-center rounded-9 flex flex-col justify-between">
         <h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black text-white/85">COARSES HELD WITH EXCEPTIVE</h3>
         <h2
-          x-data="{ count: 0, end: 139, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 10); } }"
+          x-data="{ count: 0, end: 144, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 10); } }"
           x-init="observer = new IntersectionObserver((e) => { if (e[0].isIntersecting) { start(); observer.disconnect(); } }); observer.observe($el)"
           x-text="count"
           class="font-black text-h2Md lg:text-h2 text-center text-white/85 mt-auto mb-auto"
@@ -136,7 +136,7 @@ import pellepp from "../assets/images/pellepp.webp"
       <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/greenpeace.webp')] hover:bg-cover hover:bg-center rounded-9 flex flex-col justify-between">
         <h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black text-white/85">HAPPY <br>CONTESTANTS</h3>
         <h2
-          x-data="{ count: 0, end: 211, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 10); } }"
+          x-data="{ count: 0, end: 434, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 10); } }"
           x-init="observer = new IntersectionObserver((e) => { if (e[0].isIntersecting) { start(); observer.disconnect(); } }); observer.observe($el)"
           x-text="count"
           class="font-black text-h2Md lg:text-h2 text-center text-white/85 mt-auto mb-auto"
@@ -146,7 +146,7 @@ import pellepp from "../assets/images/pellepp.webp"
       <div class="py-s px-s bg-white/50 w-auto lg:w-[479px] h-[247px] hover:bg-[url('/atlanticosprey.webp')] hover:bg-cover hover:bg-center rounded-9 flex flex-col justify-between">
         <h3 class="text-h3Sm md:text-h3Md lg:text-h3 font-black text-white/85">YEARLY TRAINING SESSIONS</h3>
         <h2
-          x-data="{ count: 0, end: 16, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 50); } }"
+          x-data="{ count: 0, end: 5, observer: null, start() { let i = setInterval(() => { this.count++; if (this.count >= this.end) clearInterval(i); }, 50); } }"
           x-init="observer = new IntersectionObserver((e) => { if (e[0].isIntersecting) { start(); observer.disconnect(); } }); observer.observe($el)"
           x-text="count"
           class="font-black text-h2Md lg:text-h2 text-center text-white/85 mt-auto mb-auto"
